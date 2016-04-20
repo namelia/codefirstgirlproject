@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sleep</title>
+    <!-- For the Social Media Button -->
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "d555e7f2-9fcb-40a4-9664-34ffad29b31f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+    <!-- For the responsive effect-->
+    <meta name = "viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href= 'dist/css/bootstrap.css' rel='stylesheet'>
+    <script src="myScript.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- FONTS-->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="20">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type= "button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#home">Nancy Amelia</a>
+        </div>
+        <div class="navbar-collapse collapse" style="height: 1px;">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#facts">Facts</a></li>
+                <li><a href="#signs">Take the Test</a></li>
+                <li><a href="#calculate">Sleep Required</a></li>
+                <li><a href="#dangers">Dangers</a></li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id = "home">
+        <div class = "container-fluid">
+            <div class="jumbotron">
+            <h1> Work Hard.Play Hard<br>Rest Well</h1>
+            </div>
+            <p>Let your body have the <strong>peace</strong> that it deserves</p>
+        </div>
+    </div>
+
+    <div class ="container" id="facts">
+        <h2>3 Facts about Sleep</h2>
+        <div class="row">
+            <button type="button" class="btn btn-info" data-toggle="collapse"  data-target="#fact1">
+                <span data-toggle="tooltip" data-placement="right" title="Click me!">Fact 1</span>
+            </button>
+
+                    <div id="fact1" class="collapse" >
+                        Humans spend <strong> &frac13; </strong> of their lives sleeping<br> That's about <strong> 25 years</strong>
+                    </div>
+
+
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#fact2">
+                <span data-toggle="tooltip" data-placement="right" title="Click me!">Fact 2</span>
+            </button>
+
+                        <div id="fact2" class="collapse">
+                             Most people can survive 2 months without food but only live up to 11 days without sleeping
+                        </div>
+
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#fact3">
+                    <span data-toggle="tooltip" data-placement="right" title="Click me!">Fact 3</span>
+                </button>
+
+                <div id="fact3" class="collapse" >
+                    Sleep deprivation affects the brain in multiple ways that can impair judgment and slow reaction
+                </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="container" id = "signs">
+        <h2>Find Out if You're Sleep Deprived</h2>
+        <button type="button" class="btn btn-info" data-toggle="collapse"  data-target="#test1">
+            <span data-toggle="tooltip" data-placement="right" title="Click me!">Take The test!</span>
+        </button>
+        </br></br>
+        <div id="test1" class="collapse">
+            <form id="test" onclick="testresult()">
+                 Name:<input type="text" id="NAME" name="name"><br>
+                <input type="checkbox" name=1 > I need an alarm clock to wake up<br>
+                <input type="checkbox" name=2 > I drink a lot of coffee/energy drink to stay awake<br>
+                <input type="checkbox" name=3 > I fall asleep within 5 minutes of getting into bed<br>
+                <input type="checkbox" name=4 > I get easily irritated and experience frequent mood swings <br>
+                <input type="checkbox" name=5 > I find it difficult to concentrate when doing my work<br>
+                <input type="checkbox" name=6 > I feel dizzy for no apparent reason<br>
+                <input type="checkbox" name=7 > I am always exhausted<br>
+                <input type="checkbox" name=8 > I am often forgetful lately<br>
+            </form>
+            <button type="button" class="btn btn-info" data-toggle="collapse"  data-target="#testresult">
+            <span data-toggle="tooltip" data-placement="right" title="Click me!">View Result</span>
+            </button>
+            </br></br></br></br>
+                <div id="testresult" class="collapse">
+                    <p id="result2"></p>
+                 </div>
+        </br></br></br></br>
+        </div>
+    </div>
+
+    <div class = "container" id="calculate">
+        <h2>How Much Sleep Do You Actually Need?</h2>
+        <p> How old are you?</p>
+        <select id ="ageGroup" onclick="sleephours()">
+            <option value="0"></option>
+            <option value="1">0-2 months</option>
+            <option value="2">3-11 months</option>
+            <option value="3">1-3 years</option>
+            <option value="4">3-5 years</option>
+            <option value="5">5-10 years</option>
+            <option value="6">10-17 years</option>
+            <option value="7">Adults</option>
+        </select>
+        </br>
+        </br>
+        <p id="result"></p>
+    </div>
+
+    <div class="container" id = "dangers">
+    <h2>Dangers of sleep deprived</h2>
+    <div class="alert alert-danger">
+        <strong>Danger!</strong> Sleep Deprivation Can Lead to Serious Health Problems
+    </div>
+    <div id="picture" >
+        <div class ='col-sm-4'>
+            <img src='p1.jpg'class="img-responsive" alt="Responsive image">
+        </div>
+        <div id="second" class ="col-sm-4">
+             <img src='p2.jpg'class="img-responsive" alt="Responsive image">
+        </div>
+        <div class ='col-sm-4'>
+             <img src='p4.jpg'class="img-responsive" alt="Responsive image">
+        </div>
+    </div>
+
+</div>
+
+<div class = "container" id ="socialmedia">
+    <span class='st_sharethis_hcount' displayText='ShareThis'></span>
+    <span class='st_facebook_hcount' displayText='Facebook'></span>
+    <span class='st_twitter_hcount' displayText='Tweet'></span>
+    <span class='st_pinterest_hcount' displayText='Pinterest'></span>
+</div>
+
+</body>
+</html>		
